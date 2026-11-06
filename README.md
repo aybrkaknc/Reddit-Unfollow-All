@@ -19,7 +19,7 @@ Pick the subreddits to keep, press start, and it leaves all the others for you.
 
 <br>
 
-<img src="icons/banner1400x560.png" alt="Reddit Unfollow All: unfollow all subreddits with one click" width="100%">
+<img src="screenshots/banner1400x560.png" alt="Reddit Unfollow All: unfollow all subreddits with one click" width="100%">
 
 ## Screenshot
 
