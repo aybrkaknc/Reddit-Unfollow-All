@@ -884,6 +884,93 @@
         if (!item.placeholder) State.attemptedKeys.add(itemKey(item));
     }
 
+    // Old Reddit satırından subreddit adını ve kimliğini çıkarır. Adımlar sırayla denenir,
+    // ilk bulan kazanır. Ad bulunamazsa name null döner.
+    function resolveOldRedditName(btn, index) {
+        let name = null;
+        let id = `old-${index}`;
+
+        // 1. Sidebar/Liste Yapısı (fancy-toggle-button) - EN GÜVENİLİR
+        const fancySpan = btn.closest('.fancy-toggle-button');
+        if (fancySpan) {
+            // data-sr_name attribute'unu doğrudan oku (dataset camelCase sorunu olabilir)
+            const srName = fancySpan.getAttribute('data-sr_name');
+            if (srName) {
+                name = srName;
+            } else {
+                // Option A: En yakın <li> elementine çık ve orada .title ara
+                const listItem = btn.closest('li');
+                if (listItem) {
+                    const titleLink = listItem.querySelector('a.title');
+                    if (titleLink) {
+                        name = titleLink.textContent.trim();
+                    }
+                } else if (fancySpan.parentElement) {
+                    // Fallback: li bulunamazsa parent'a bak
+                    const titleLink = fancySpan.parentElement.querySelector('a.title');
+                    if (titleLink) {
+                        name = titleLink.textContent.trim();
+                    }
+                }
+            }
+        }
+
+        // 2. ".thing" elementi üzerinden (data-subreddit attribute)
+        if (!name) {
+            const thing = btn.closest('.thing');
+            if (thing) {
+                if (thing.dataset.subreddit) {
+                    name = thing.dataset.subreddit;
+                }
+                if (thing.dataset.fullname) {
+                    id = thing.dataset.fullname;
+                }
+
+                // Thing içindeki başlık linki
+                if (!name) {
+                    const infoLink = thing.querySelector('a.subreddit-info, a.title');
+                    if (infoLink) {
+                        const href = infoLink.getAttribute('href') || '';
+                        const match = href.match(/\/r\/([^\/]+)/);
+                        name = match ? match[1] : infoLink.textContent.trim();
+                    }
+                }
+            }
+        }
+
+        // 3. ".subreddit-info" veya ".entry .subreddit" içinden
+        if (!name) {
+            const entry = btn.closest('.entry');
+            if (entry) {
+                const subredditLink = entry.querySelector('.subreddit');
+                if (subredditLink) {
+                    name = subredditLink.textContent.trim();
+                }
+            }
+        }
+
+        // 4. Sidebar Görünümü (Eski fallback)
+        if (!name) {
+            const side = btn.closest('.side');
+            if (side) {
+                const sideTitle = side.querySelector('.redditname a');
+                if (sideTitle) {
+                    name = sideTitle.textContent.trim();
+                }
+            }
+        }
+
+        // 5. Sayfa Başlığı
+        if (!name) {
+            const headerName = document.querySelector('.pagename a');
+            if (headerName) {
+                name = headerName.textContent.trim();
+            }
+        }
+
+        return { name, id };
+    }
+
     function scanButtons(forceLog = false) {
         let found = [];
 
@@ -902,88 +989,9 @@
         // .active: sadece abone olunan satırlarda "leave" seçeneği aktiftir
         const oldReddit = document.querySelectorAll('a.option.remove.active');
         oldReddit.forEach((btn, i) => {
-            let name = null;
-            let id = `old-${i}`;
+            const { name: resolved, id } = resolveOldRedditName(btn, i);
+            let name = resolved;
 
-            // 1. Sidebar/Liste Yapısı (fancy-toggle-button) - EN GÜVENİLİR
-            const fancySpan = btn.closest('.fancy-toggle-button');
-            if (fancySpan) {
-                // data-sr_name attribute'unu doğrudan oku (dataset camelCase sorunu olabilir)
-                const srName = fancySpan.getAttribute('data-sr_name');
-                if (srName) {
-                    name = srName;
-                } else {
-                    // Option A: En yakın <li> elementine çık ve orada .title ara
-                    const listItem = btn.closest('li');
-                    if (listItem) {
-                        const titleLink = listItem.querySelector('a.title');
-                        if (titleLink) {
-                            name = titleLink.textContent.trim();
-                        }
-                    } else if (fancySpan.parentElement) {
-                        // Fallback: li bulunamazsa parent'a bak
-                        const titleLink = fancySpan.parentElement.querySelector('a.title');
-                        if (titleLink) {
-                            name = titleLink.textContent.trim();
-                        }
-                    }
-                }
-            }
-
-            // 2. ".thing" elementi üzerinden (data-subreddit attribute)
-            if (!name) {
-                const thing = btn.closest('.thing');
-                if (thing) {
-                    if (thing.dataset.subreddit) {
-                        name = thing.dataset.subreddit;
-                    }
-                    if (thing.dataset.fullname) {
-                        id = thing.dataset.fullname;
-                    }
-
-                    // Thing içindeki başlık linki
-                    if (!name) {
-                        const infoLink = thing.querySelector('a.subreddit-info, a.title');
-                        if (infoLink) {
-                            const href = infoLink.getAttribute('href') || '';
-                            const match = href.match(/\/r\/([^\/]+)/);
-                            name = match ? match[1] : infoLink.textContent.trim();
-                        }
-                    }
-                }
-            }
-
-            // 3. ".subreddit-info" veya ".entry .subreddit" içinden
-            if (!name) {
-                const entry = btn.closest('.entry');
-                if (entry) {
-                    const subredditLink = entry.querySelector('.subreddit');
-                    if (subredditLink) {
-                        name = subredditLink.textContent.trim();
-                    }
-                }
-            }
-
-            // 4. Sidebar Görünümü (Eski fallback)
-            if (!name) {
-                const side = btn.closest('.side');
-                if (side) {
-                    const sideTitle = side.querySelector('.redditname a');
-                    if (sideTitle) {
-                        name = sideTitle.textContent.trim();
-                    }
-                }
-            }
-
-            // 5. Sayfa Başlığı
-            if (!name) {
-                const headerName = document.querySelector('.pagename a');
-                if (headerName) {
-                    name = headerName.textContent.trim();
-                }
-            }
-
-            // 6. Temizleme ve Numaralandırma
             // Sayfa başlığı ("subreddits") gerçek ad değildir; "r/subreddit_tips" gibi adlar korunur
             const placeholder = !name || /^(my )?subreddit('ler|s)?$/i.test(name);
             if (placeholder) {
