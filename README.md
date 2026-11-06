@@ -21,8 +21,6 @@ Pick the subreddits to keep, press start, and it leaves all the others for you.
 
 ## Screenshots
 
-<img src="screenshots/1280x800.png" alt="The Reddit Unfollow All panel on the Manage communities page" width="100%">
-
 <img src="screenshots/redditunfollowall.gif" alt="Reddit Unfollow All leaving subreddits" width="100%">
 
 ## What you can do
