@@ -1,12 +1,8 @@
 <div align="center">
-  
+<img src="icons/icon128.png" alt="" width="104"> <h1>Reddit Unfollow All</h1>
 <img src="screenshots/banner1400x560.png" alt="Reddit Unfollow All: unfollow all subreddits with one click" width="100%">
-
-<br><br><br>
-
-<img src="icons/icon128.png" alt="" width="104">
-
-# Reddit Unfollow All
+  
+<br><br>
 
 **Bulk unfollow subreddits, and keep the ones you love.**
 
