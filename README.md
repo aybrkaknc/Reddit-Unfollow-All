@@ -1,8 +1,8 @@
 <div align="center">
-<img src="icons/icon128.png" alt="" width="104"> <h1>Reddit Unfollow All</h1>
-<img src="screenshots/banner1400x560.png" alt="Reddit Unfollow All: unfollow all subreddits with one click" width="100%">
-  
-<br><br>
+
+<img src="icons/icon128.png" alt="" width="104">
+
+# Reddit Unfollow All
 
 **Bulk unfollow subreddits, and keep the ones you love.**
 
@@ -19,10 +19,11 @@ Pick the subreddits to keep, press start, and it leaves all the others for you.
 
 <br>
 
-
-## Screenshot
+## Screenshots
 
 <img src="screenshots/1280x800.png" alt="The Reddit Unfollow All panel on the Manage communities page" width="100%">
+
+<img src="screenshots/redditunfollowall.gif" alt="Reddit Unfollow All leaving subreddits" width="100%">
 
 ## What you can do
 
