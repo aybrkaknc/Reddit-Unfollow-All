@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Unfollow All - Hot Reload (dev)",
+  "version": "1.0.0",
+  "description": "Development helper. Reloads the unpacked Reddit Unfollow All extension when its files change.",
+  "permissions": [
+    "alarms",
+    "management",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:35729/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

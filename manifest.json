@@ -1,29 +1,36 @@
 {
   "manifest_version": 3,
   "name": "Reddit Unfollow All",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Quickly unsubscribe from all your Reddit subreddits with a sleek UI panel.",
   "author": "Antigravity (by Ayberk)",
   "icons": {
     "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
   "action": {
+    "default_title": "Reddit Unfollow All",
     "default_icon": {
       "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     }
   },
-  "permissions": [],
+  "permissions": [
+    "storage"
+  ],
   "host_permissions": [
+    "*://*.reddit.com/subreddits",
     "*://*.reddit.com/subreddits/*",
     "*://*.reddit.com/user/*/communities/*"
   ],
   "content_scripts": [
     {
       "matches": [
+        "*://*.reddit.com/subreddits",
         "*://*.reddit.com/subreddits/*",
         "*://*.reddit.com/user/*/communities/*"
       ],
@@ -36,6 +43,25 @@
       "run_at": "document_idle"
     }
   ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/fonts/*.woff2",
+        "icons/icon48.png"
+      ],
+      "matches": [
+        "*://*.reddit.com/*"
+      ]
+    }
+  ],
+  "commands": {
+    "toggle-panel": {
+      "suggested_key": {
+        "default": "Alt+Shift+U"
+      },
+      "description": "Open or close the panel"
+    }
+  },
   "background": {
     "service_worker": "src/background.js"
   }

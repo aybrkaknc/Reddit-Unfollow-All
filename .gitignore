@@ -11,6 +11,7 @@ desktop.ini
 
 # AI assistant folders
 .gemini/
+.agent/
 
 # Secrets: never commit these
 .env
