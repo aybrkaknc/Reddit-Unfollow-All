@@ -21,6 +21,8 @@ Pick the subreddits to keep, press start, and it leaves all the others for you.
 
 ## Screenshots
 
+<img src="screenshots/1280x800.png" alt="The Reddit Unfollow All panel on the Manage communities page" width="100%">
+
 <img src="screenshots/redditunfollowall.gif" alt="Reddit Unfollow All leaving subreddits" width="100%">
 
 ## What you can do
@@ -29,11 +31,11 @@ Pick the subreddits to keep, press start, and it leaves all the others for you.
 |---|---|
 | **Whitelist** | Tick the subreddits you want to stay subscribed to, for example r/Turkey or r/programming. Everything else is unfollowed. |
 | **Search and filter** | Find a subreddit in the list before you start. Keep all or keep none with one click. |
-| **Speed** | Press the badge next to Start to move through the speeds from 1x to 4x, so you can go gently if Reddit pushes back. |
+| **Settings** | Press the gear button in the panel to choose the language, the speed from 1x to 4x, and the panel size up to 200%. Go slower if Reddit pushes back. The panel starts larger on big screens and remembers your size. |
 | **Cancel** | Stop in the middle. Subreddits already left stay left. |
 | **Undo** | Changed your mind? Press the ↶ button to rejoin the subreddits you left. It works until you reload or leave the page. |
 | **Both Reddit designs** | Works on the current Reddit and on `old.reddit.com`. |
-| **Two languages** | A one-click English and Turkish switch. |
+| **Two languages** | English and Turkish. |
 
 ## Getting started
 
@@ -79,7 +81,7 @@ Pick a slower speed and start again. Reddit can limit how fast you click.
 
 ## Reporting problems
 
-If something goes wrong, click the GitHub button in the panel's top right corner to open a pre-filled form, or open an [issue](../../issues/new/choose) yourself and say which Reddit design you use (new or old) and what the panel's log says.
+If something goes wrong, open the panel's settings with the gear button and press **Report** to open a pre-filled form, or open an [issue](../../issues/new/choose) yourself and say which Reddit design you use (new or old) and what the panel's log says.
 
 ## Contributing
 
