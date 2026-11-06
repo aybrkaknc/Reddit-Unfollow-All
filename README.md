@@ -1,4 +1,8 @@
 <div align="center">
+  
+<img src="screenshots/banner1400x560.png" alt="Reddit Unfollow All: unfollow all subreddits with one click" width="100%">
+
+<br><br><br>
 
 <img src="icons/icon128.png" alt="" width="104">
 
@@ -19,7 +23,6 @@ Pick the subreddits to keep, press start, and it leaves all the others for you.
 
 <br>
 
-<img src="screenshots/banner1400x560.png" alt="Reddit Unfollow All: unfollow all subreddits with one click" width="100%">
 
 ## Screenshot
 
