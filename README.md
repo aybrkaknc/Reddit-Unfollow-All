@@ -11,13 +11,19 @@ Pick the subreddits to keep, press start, and it leaves all the others for you.
 
 [![Download](https://img.shields.io/badge/Download-Extension_zip-2ea043?style=for-the-badge)](../../releases)
 
-![Platform](https://img.shields.io/badge/Browser-Chrome-0078D4)
+[![Platform](https://img.shields.io/badge/Browser-Chrome-0078D4)](https://chromewebstore.google.com/detail/reddit-unfollow-all/lecbgbpldemagjcdjdbifciecnhhgfhl)
 ![Version](https://img.shields.io/badge/version-1.1.0-7b3fb3)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 </div>
 
 <br>
+
+<img src="icons/banner1400x560.png" alt="Reddit Unfollow All: unfollow all subreddits with one click" width="100%">
+
+## Screenshot
+
+<img src="screenshots/1280x800.png" alt="The Reddit Unfollow All panel on the Manage communities page" width="100%">
 
 ## What you can do
 
