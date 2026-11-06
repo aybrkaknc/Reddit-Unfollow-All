@@ -1,34 +1,78 @@
-# Reddit Unfollow All Extension
+<div align="center">
 
-An extension I developed for the spring cleaning I occasionally do on Reddit. It helps you bulk unfollow subreddits while keeping the ones you want.
+<img src="icons/icon128.png" alt="" width="104">
 
-## Features
+# Reddit Unfollow All
 
-- **Whitelist System:** Select specific subreddits to keep (e.g., r/Turkey, r/programming) and unfollow the rest.
-- **Old & New Reddit Support:** Works on both the modern interface and `old.reddit.com`.
-- **Search & Filter:** Easily find subreddits in the list before starting the process.
-- **Language Support:** simple TR/EN toggle.
+**Bulk unfollow subreddits, and keep the ones you love.**
 
-## Installation
+A Chrome extension for the spring cleaning you do on Reddit every now and then.
+Pick the subreddits to keep, press start, and it leaves all the others for you.
 
-Since this is a personal tool and not on the Chrome Web Store yet:
+[![Download](https://img.shields.io/badge/Download-Extension_zip-2ea043?style=for-the-badge)](../../releases)
 
-1. Clone or download this repository.
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable "Developer mode" in the top right.
-4. Click "Load unpacked" and select the folder of this project.
-5. Go to your Reddit subscription page (e.g., `reddit.com/subreddits` or sidebar) and you'll see the panel.
+![Platform](https://img.shields.io/badge/Browser-Chrome-0078D4)
+![Version](https://img.shields.io/badge/version-1.0.0-7b3fb3)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-## Usage
+</div>
 
-1. **Review List:** Click the button to see all your subscriptions.
-2. **Select to Keep:** Check the boxes for subreddits you want to stay subscribed to.
-3. **Start:** Hit start and let it run. It will skip the ones you selected.
+<br>
+
+## What you can do
+
+| Area | What you can do |
+|---|---|
+| **Whitelist** | Tick the subreddits you want to stay subscribed to, for example r/Turkey or r/programming. Everything else is unfollowed. |
+| **Search and filter** | Find a subreddit in the list before you start. Keep all or keep none with one click. |
+| **Speed** | Four speeds from Slow to Turbo, so you can go gently if Reddit pushes back. |
+| **Pause and resume** | Stop in the middle and carry on later. |
+| **Both Reddit designs** | Works on the current Reddit and on `old.reddit.com`. |
+| **Two languages** | A one-click English and Turkish switch. |
+
+## Getting started
+
+The extension is not on the Chrome Web Store yet, so you load it by hand:
+
+1. **Download** `reddit-unfollow-all-<version>.zip` from the [Releases page](../../releases) and extract it anywhere. (Or clone this repository.)
+2. **Open** `chrome://extensions/` in Chrome and switch on **Developer mode** in the top right.
+3. **Load it.** Press **Load unpacked** and choose the extracted folder.
+4. **Use it.** Go to your subscriptions page (`reddit.com/subreddits` or your communities page). The panel appears on the page.
+
+Then:
+
+1. **Review the list.** Press **Whitelist** to see all your subscriptions.
+2. **Pick what to keep.** Tick the subreddits that should stay.
+3. **Start.** Press **Start**. It skips the ones you ticked.
+
+> [!IMPORTANT]
+> Unfollowing is done through Reddit's own buttons and cannot be undone in one click. Check your whitelist before you press Start.
+
+## Requirements
+
+- Google Chrome, or another Chromium-based browser that can load unpacked extensions.
+- A Reddit account that is signed in.
+
+## Questions
+
+**Does it send my data anywhere?**
+No. Everything runs in your browser. See [PRIVACY.md](PRIVACY.md).
+
+**It stops or skips some subreddits.**
+Pick a slower speed and start again. Reddit can limit how fast you click.
+
+## Reporting problems
+
+If something goes wrong, open an [issue](../../issues/new/choose) and say which Reddit design you use (new or old) and what the panel's log says.
 
 ## Contributing
 
-Feel free to fork and submit a PR if you find a bug or want to improve the spaghetti code.
+See [CONTRIBUTING.md](CONTRIBUTING.md). To report a security problem, see [SECURITY.md](SECURITY.md).
+
+## Building from source
+
+There is nothing to build. The extension is plain JavaScript and CSS: load the repository folder with **Load unpacked** as described above.
 
 ## License
 
-MIT
+MIT. See [LICENSE](LICENSE) for details.

@@ -1,5 +1,30 @@
-.gemini/
-node_modules/
-*.log
+# Operating system
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*~
+
+# AI assistant folders
+.gemini/
+
+# Secrets: never commit these
+.env
+.env.*
+*.pem
+*.key
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Build output
+build/
+dist/
+out/
+node_modules/
