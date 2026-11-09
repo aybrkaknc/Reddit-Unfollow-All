@@ -6,13 +6,14 @@
 
 **Bulk unfollow subreddits, and keep the ones you love.**
 
-A Chrome extension for the spring cleaning you do on Reddit every now and then.
+A Chrome and Firefox extension for the spring cleaning you do on Reddit every now and then.
 Pick the subreddits to keep, press start, and it leaves all the others for you.
 
 [![Download](https://img.shields.io/badge/Download-Extension_zip-2ea043?style=for-the-badge)](../../releases)
 
 [![Platform](https://img.shields.io/badge/Browser-Chrome-0078D4)](https://chromewebstore.google.com/detail/reddit-unfollow-all/lecbgbpldemagjcdjdbifciecnhhgfhl)
-![Version](https://img.shields.io/badge/version-1.1.0-7b3fb3)
+![Platform](https://img.shields.io/badge/Browser-Firefox-FF7139)
+![Version](https://img.shields.io/badge/version-1.2.0-7b3fb3)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 </div>
@@ -20,6 +21,8 @@ Pick the subreddits to keep, press start, and it leaves all the others for you.
 <br>
 
 ## Screenshots
+
+<img src="screenshots/1280x800.png" alt="The Reddit Unfollow All panel on the Manage communities page" width="100%">
 
 <img src="screenshots/redditunfollowall.gif" alt="Reddit Unfollow All leaving subreddits" width="100%">
 
@@ -42,7 +45,9 @@ The extension is not on the Chrome Web Store yet, so you load it by hand:
 1. **Download** `reddit-unfollow-all-<version>.zip` from the [Releases page](../../releases) and extract it anywhere. (Or clone this repository.)
 2. **Open** `chrome://extensions/` in Chrome and switch on **Developer mode** in the top right.
 3. **Load it.** Press **Load unpacked** and choose the extracted folder.
-4. **Use it.** Go to your subscriptions page (`reddit.com/subreddits` or your communities page). Press **Unfollow All** next to the **Manage communities** heading to open the panel.
+
+   In Firefox, open `about:debugging#/runtime/this-firefox`, press **Load Temporary Add-on** and choose `manifest.json` in the extracted folder. Firefox removes a temporary add-on when it restarts.
+4. **Use it.** Go to your subscriptions page (`reddit.com/subreddits` or your communities page). The panel opens by itself. Press **Unfollow All** next to the **Manage communities** heading to start: the extension first shows how many subreddits it will leave and how many it will keep, and only starts after you confirm.
 
 You can also open or close the panel with the extension's toolbar icon or `Alt+Shift+U`. From any other page, these open your subscriptions page in a new tab with the panel ready.
 
@@ -58,6 +63,7 @@ Then:
 ## Requirements
 
 - Google Chrome, or another Chromium-based browser that can load unpacked extensions.
+- Or Firefox 128 or newer.
 - A Reddit account that is signed in.
 
 ## Questions
@@ -66,10 +72,10 @@ Then:
 No. Everything runs in your browser. See [PRIVACY.md](PRIVACY.md).
 
 **The panel doesn't appear.**
-Press **Unfollow All** on the page, the toolbar icon or `Alt+Shift+U`. If you reached your communities page by clicking through Reddit's menus, reload the page first. If the button can't find the heading, it appears in the bottom right corner instead.
+Press **Unfollow All** on the page, the toolbar icon or `Alt+Shift+U`. If the button can't find the heading, it appears in the bottom right corner instead.
 
 **`Alt+Shift+U` doesn't work.**
-Chrome only assigns the shortcut on a fresh install, and not if another extension already uses it. Set it at `chrome://extensions/shortcuts`.
+Chrome only assigns the shortcut on a fresh install, and not if another extension already uses it. Set it at `chrome://extensions/shortcuts`. In Firefox, open `about:addons`, press the gear button and choose **Manage Extension Shortcuts**.
 
 **The panel warns that Reddit's page may have changed.**
 The extension may not work until it is updated. Press **Report** to open a pre-filled issue on GitHub. You can read it before you send it, and it doesn't include your username or subreddits.

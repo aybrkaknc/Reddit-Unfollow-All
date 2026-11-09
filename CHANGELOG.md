@@ -3,21 +3,25 @@
 All notable changes to this project are listed here, newest first.
 The format follows [Keep a Changelog](https://keepachangelog.com/).
 
-## [Unreleased]
+## [1.2.0] - 2026-11-09
 
 ### Added
 
+- Firefox support (Firefox 128 or newer). The same zip loads in Chrome and Firefox.
 - A settings page inside the panel, opened with the new gear button. The panel title changes to Settings with a back arrow, and the gear and refresh buttons hide. Press the back arrow or Esc to return.
 - Panel size in the settings: makes the panel, its windows and the Unfollow All button larger, from 100% to 200%. The size starts from your screen size, so a 2560x1440 screen opens at 125%, and your choice is remembered on your device.
 
 ### Changed
 
 - The panel uses Reddit's own typefaces, Reddit Sans for all text and Reddit Mono for the log, instead of Inter, Space Grotesk and JetBrains Mono. They are bundled with the extension under the SIL Open Font License.
+- The panel opens by itself on the Manage communities page, so you no longer have to press Unfollow All to see it.
+- The Unfollow All button next to the Manage communities heading now starts the run. It asks for confirmation first, the same as the Start button in the panel.
 - The language switch, the speed and the Report button moved to the settings page. All the choices are shown side by side instead of changing with each press.
 - The settings can't be opened during a run, so the speed can no longer change in the middle of one. To go slower, cancel and start again.
 
 ### Fixed
 
+- The extension now works right after you reach the Manage communities page through Reddit's menus. Before, you had to reload the page once.
 - The panel no longer grows past the top of the screen when you drag it up and open the log, the whitelist or the settings. It slides back into view, and it also stays on screen when you make the browser window smaller.
 - When the panel gets smaller (minimize, closing the log or the whitelist), the title now always slides down toward the bottom edge. After you dragged the panel, closing the whitelist pulled the bottom edge up toward the title instead.
 - On a short window, a large panel is no longer taller than the screen. Its content scrolls instead.

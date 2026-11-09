@@ -19,14 +19,16 @@ async function init() {
     }
     State.scale = SCALES.includes(saved.scale) ? saved.scale : defaultScale();
 
-    // Panel kapalı başlar; yalnızca araç çubuğu ikonundan gelindiyse açık gelir
+    // Hedef sayfada panel açık gelir
+    State.isPanelOpen = isTargetPage();
     if (window.location.hash === OPEN_HASH) {
-        State.isPanelOpen = true;
         history.replaceState(history.state, '', window.location.pathname + window.location.search);
     }
 
     injectUI();
-    scanButtons();
+    // Betik her Reddit sayfasında yüklenir; hedef sayfa dışında panel gizli kalır
+    syncPanelWithPage();
+    if (State.isOnTargetPage) scanButtons();
     startObserver();
     syncLauncher();
     setTimeout(() => {
@@ -44,7 +46,7 @@ async function init() {
 
     // Sayfa yüklenmesi için süre tanıdıktan sonra hâlâ abonelik yoksa bildir
     setTimeout(() => {
-        if (State.totalActions === 0 && !State.isRunning) warn(t.notFound);
+        if (State.isOnTargetPage && State.totalActions === 0 && !State.isRunning) warn(t.notFound);
     }, 4000);
 
     // Yavaş yüklenen sayfalarda yanlış alarm vermemek için yapı kontrolü gecikmeli başlar

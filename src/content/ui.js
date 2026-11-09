@@ -614,7 +614,9 @@ function createLauncher() {
     launcher.addEventListener('click', e => {
         e.preventDefault();
         e.stopPropagation();
-        togglePanel();
+        openPanel();
+        // Onay penceresi startUnfollowing içinde gösterilir
+        if (!State.isRunning) startUnfollowing();
     });
     return launcher;
 }
