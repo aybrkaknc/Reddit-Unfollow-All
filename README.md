@@ -40,14 +40,14 @@ Pick the subreddits to keep, press start, and it leaves all the others for you.
 
 ## Getting started
 
-The extension is not on the Chrome Web Store yet, so you load it by hand:
+**Chrome:** install it from the [Chrome Web Store](https://chromewebstore.google.com/detail/reddit-unfollow-all/lecbgbpldemagjcdjdbifciecnhhgfhl).
+
+**Firefox:** load it by hand:
 
 1. **Download** `reddit-unfollow-all-<version>.zip` from the [Releases page](../../releases) and extract it anywhere. (Or clone this repository.)
-2. **Open** `chrome://extensions/` in Chrome and switch on **Developer mode** in the top right.
-3. **Load it.** Press **Load unpacked** and choose the extracted folder.
+2. **Open** `about:debugging#/runtime/this-firefox`, press **Load Temporary Add-on** and choose `manifest.json` in the extracted folder. Firefox removes a temporary add-on when it restarts.
 
-   In Firefox, open `about:debugging#/runtime/this-firefox`, press **Load Temporary Add-on** and choose `manifest.json` in the extracted folder. Firefox removes a temporary add-on when it restarts.
-4. **Use it.** Go to your subscriptions page (`reddit.com/subreddits` or your communities page). The panel opens by itself. Press **Unfollow All** next to the **Manage communities** heading to start: the extension first shows how many subreddits it will leave and how many it will keep, and only starts after you confirm.
+**Use it.** Go to your subscriptions page (`reddit.com/subreddits` or your communities page). The panel opens by itself. Press **Unfollow All** next to the **Manage communities** heading to start: the extension first shows how many subreddits it will leave and how many it will keep, and only starts after you confirm.
 
 You can also open or close the panel with the extension's toolbar icon or `Alt+Shift+U`. From any other page, these open your subscriptions page in a new tab with the panel ready.
 
@@ -62,8 +62,8 @@ Then:
 
 ## Requirements
 
-- Google Chrome, or another Chromium-based browser that can load unpacked extensions.
-- Or Firefox 142 or newer.
+- Google Chrome, or another Chromium-based browser (for loading unpacked extensions).
+- Firefox 142 or newer.
 - A Reddit account that is signed in.
 
 ## Questions
@@ -72,7 +72,7 @@ Then:
 No. Everything runs in your browser. See [PRIVACY.md](PRIVACY.md).
 
 **The panel doesn't appear.**
-Press **Unfollow All** on the page, the toolbar icon or `Alt+Shift+U`. If the button can't find the heading, it appears in the bottom right corner instead.
+The panel opens by itself on the subscription pages. If you closed it, press **Unfollow All** on the page, the toolbar icon or `Alt+Shift+U`. If the button can't find the heading, it appears in the bottom right corner instead.
 
 **`Alt+Shift+U` doesn't work.**
 Chrome only assigns the shortcut on a fresh install, and not if another extension already uses it. Set it at `chrome://extensions/shortcuts`. In Firefox, open `about:addons`, press the gear button and choose **Manage Extension Shortcuts**.

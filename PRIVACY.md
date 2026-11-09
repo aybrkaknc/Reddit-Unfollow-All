@@ -1,6 +1,6 @@
 # Privacy Policy for Reddit Unfollow All
 
-**Last Updated:** November 6, 2026
+**Last Updated:** November 9, 2026
 
 ## 1. Data Collection
 We do **not** collect or transmit any of your personal data.
@@ -13,7 +13,7 @@ We do **not** collect or transmit any of your personal data.
 ## 2. Permissions
 The extension requests the following permissions for functional purposes only:
 
-- **Host Permissions (reddit.com):** The extension requires access to specific Reddit subscription pages (`reddit.com/subreddits`, `reddit.com/subreddits/*` and `reddit.com/user/*/communities/*`) solely to identify and interact with the "Joined/Leave" buttons. This access is strictly limited to DOM manipulation necessary to automate the "unfollow" process initiated by the user. No user data is scraped or transmitted off the device.
+- **Host Permissions (reddit.com):** The extension requires access to specific Reddit subscription pages (`reddit.com/subreddits`, `reddit.com/subreddits/*` and `reddit.com/user/*/communities/*`) solely to identify and interact with the "Joined/Leave" buttons. This access is strictly limited to DOM manipulation necessary to automate the "unfollow" process initiated by the user. The extension is loaded on Reddit pages so it can open its panel on the subscription pages; it reads and changes page content only on those subscription pages. No user data is scraped or transmitted off the device.
 - **Storage:** Used only to remember your whitelist, language choice, panel size and last subscription count on your device between visits.
 
 ## 3. Third-Party Services
