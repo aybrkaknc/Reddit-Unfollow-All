@@ -1,5 +1,7 @@
 # Contributing
 
+<p><a href="CONTRIBUTING.tr.md">Türkçe</a> | English</p>
+
 Thanks for wanting to help. Here is how to get a change in.
 
 ## Before you start
@@ -12,7 +14,7 @@ Thanks for wanting to help. Here is how to get a change in.
 1. Fork the repository and create a branch from `main`.
 2. Make your change. Keep it focused: one fix or feature per pull request.
 3. Load the folder in Chrome with **Load unpacked** (`chrome://extensions/`) and try it on both the current Reddit and `old.reddit.com`. There is no automated test suite.
-4. Add a line to [CHANGELOG.md](CHANGELOG.md) under **Unreleased**.
+4. Add a line to [CHANGELOG.md](CHANGELOG.md) under a new **[Unreleased]** heading at the top of the file.
 5. Open a pull request and fill in the template.
 
 ## Hot reload

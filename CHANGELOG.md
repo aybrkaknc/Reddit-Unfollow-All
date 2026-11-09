@@ -1,5 +1,7 @@
 # Changelog
 
+<p><a href="CHANGELOG.tr.md">Türkçe</a> | English</p>
+
 All notable changes to this project are listed here, newest first.
 The format follows [Keep a Changelog](https://keepachangelog.com/).
 

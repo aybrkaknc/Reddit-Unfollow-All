@@ -1,5 +1,7 @@
 # Security policy
 
+<p><a href="SECURITY.tr.md">Türkçe</a> | English</p>
+
 ## Reporting a vulnerability
 
 Please do not open a public issue for a security problem.
