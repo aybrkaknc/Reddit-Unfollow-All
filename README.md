@@ -13,7 +13,7 @@ Pick the subreddits to keep, press start, and it leaves all the others for you.
 
 [![Platform](https://img.shields.io/badge/Browser-Chrome-0078D4)](https://chromewebstore.google.com/detail/reddit-unfollow-all/lecbgbpldemagjcdjdbifciecnhhgfhl)
 ![Platform](https://img.shields.io/badge/Browser-Firefox-FF7139)
-![Version](https://img.shields.io/badge/version-1.2.0-7b3fb3)
+![Version](https://img.shields.io/badge/version-1.2.1-7b3fb3)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 </div>
@@ -63,7 +63,7 @@ Then:
 ## Requirements
 
 - Google Chrome, or another Chromium-based browser that can load unpacked extensions.
-- Or Firefox 128 or newer.
+- Or Firefox 142 or newer.
 - A Reddit account that is signed in.
 
 ## Questions

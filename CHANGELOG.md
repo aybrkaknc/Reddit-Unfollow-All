@@ -3,6 +3,12 @@
 All notable changes to this project are listed here, newest first.
 The format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.2.1] - 2026-11-09
+
+### Changed
+
+- Firefox 142 or newer is now required. Older versions do not support the data collection setting that Mozilla asks for.
+
 ## [1.2.0] - 2026-11-09
 
 ### Added
