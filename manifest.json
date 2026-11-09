@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Reddit Unfollow All",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Quickly unsubscribe from all your Reddit subreddits with a sleek UI panel.",
   "author": "Antigravity (by Ayberk)",
   "icons": {

@@ -3,6 +3,12 @@
 All notable changes to this project are listed here, newest first.
 The format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.2.2] - 2026-11-09
+
+### Removed
+
+- `src/content.js`, an old single-file copy of the content script that the extension no longer loaded. It made the package larger and triggered extra warnings in Firefox's add-on checks.
+
 ## [1.2.1] - 2026-11-09
 
 ### Changed
