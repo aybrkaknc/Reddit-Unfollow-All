@@ -1,5 +1,7 @@
 # Privacy Policy for Reddit Unfollow All
 
+<p><a href="PRIVACY.tr.md">Türkçe</a> | English</p>
+
 **Last Updated:** November 9, 2026
 
 ## 1. Data Collection

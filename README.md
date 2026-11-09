@@ -16,6 +16,8 @@ Pick the subreddits to keep, press start, and it leaves all the others for you.
 ![Version](https://img.shields.io/badge/version-1.2.2-7b3fb3)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
+<p align="center">English | <a href="README.tr.md">Türkçe</a></p>
+
 </div>
 
 <br>
